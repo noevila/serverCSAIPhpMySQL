@@ -1,11 +1,12 @@
 <?php 
 	session_start();
+	include_once('connection.php');
 	if($_POST['submit']){
 		$username = strip_tags($_POST['username']);
 		$password = strip_tags($_POST['password']);
         $phone = strip_tags($_POST['phone']);
         $mail = strip_tags($_POST['mail']);
-		$db = mysqli_connect("localhost", "root", "rootroot", "login") or die ("Failed to connect");
+		
 		$query = "INSERT INTO members(username,password,activated) VALUES('$username', '$password','1')";
 		$result = mysqli_query($db,$query);
 		if($result) {

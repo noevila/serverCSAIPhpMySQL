@@ -1,5 +1,7 @@
 <?php
+
 session_start();
+include_once('connection.php');
 
 if($_POST['submit']) {
 	include_once('connection.php');

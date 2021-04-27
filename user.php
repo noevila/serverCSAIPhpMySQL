@@ -1,6 +1,6 @@
 <?php
 session_start();
-$db = mysqli_connect("localhost", "root", "rootroot", "login") or die ("Failed to connect");
+include_once('connection.php');
 if (isset($_SESSION['username'])){
 	$username = $_SESSION['username'];
 }
